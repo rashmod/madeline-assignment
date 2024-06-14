@@ -5,6 +5,7 @@ import Home from './pages/Home.page';
 import Login from './pages/Login.page';
 import GeoTagging from './pages/GeoTagging.page';
 import DocumentScan from './pages/DocumentScan.page';
+import HumanResource from './pages/HumanResource.page';
 
 const router = createBrowserRouter([
 	{
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
 			{
 				path: 'scan',
 				element: <DocumentScan />,
+			},
+			{
+				path: 'hr',
+				element: <HumanResource />,
 			},
 		],
 	},

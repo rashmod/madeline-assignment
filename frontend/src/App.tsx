@@ -1,9 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
+import Navbar from './components/custom/Navbar';
 
 function App() {
 	return (
 		<main className='min-h-screen flex flex-col'>
-			<h1>Madeline Advisory</h1>
+			<Navbar />
 			<section className='flex-1 grid'>
 				<Outlet />
 			</section>
@@ -12,6 +13,7 @@ function App() {
 				<Link to='/login'>Login</Link>
 				<Link to='/geotagging'>GeoTagging</Link>
 				<Link to='/scan'>Document Scan</Link>
+				<Link to='/hr'>Human Resource</Link>
 			</div>
 		</main>
 	);
