@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { PasswordInput } from '@/components/custom/PasswordInput';
+import { useNavigate } from 'react-router-dom';
 
 const loginSchema = z.object({
 	email: z.string().email(),
@@ -31,16 +32,19 @@ export default function Login() {
 		},
 	});
 
+	const navigate = useNavigate();
+
 	function onSubmit(data: LoginSchema) {
 		console.log(data);
+		navigate('/geo-tagging');
 	}
 	return (
 		<section>
-			<h2 className='text-center text-3xl font-bold mb-4'>Login</h2>
+			<h2 className='mb-4 text-3xl font-bold text-center'>Login</h2>
 			<Form {...form}>
 				<form
 					onSubmit={form.handleSubmit(onSubmit)}
-					className='w-1/3 mx-auto flex flex-col gap-4'>
+					className='flex flex-col w-1/3 gap-4 mx-auto'>
 					<FormField
 						control={form.control}
 						name='email'
@@ -50,7 +54,6 @@ export default function Login() {
 								<FormControl>
 									<Input
 										placeholder='example@example.com'
-										type='email'
 										{...field}
 									/>
 								</FormControl>
