@@ -11,9 +11,12 @@ export default function CustomNavLink({
 		<NavLink
 			to={to}
 			className={({ isActive }) =>
-				isActive
-					? 'underline underline-offset-4 font-medium decoration-2 decoration-[#ff3131] text-[#ff3131]'
-					: undefined
+				[
+					'hover:underline underline-offset-4 decoration-2',
+					isActive
+						? 'underline font-medium decoration-[#ff3131] text-[#ff3131]'
+						: '',
+				].join(' ')
 			}>
 			{title}
 		</NavLink>

@@ -2,7 +2,7 @@ import CustomNavLink from './CustomNavLink';
 
 export default function Navbar() {
 	return (
-		<nav className='sticky top-0 z-50 p-4 mb-6 text-white bg-gray-200'>
+		<nav className='sticky top-0 z-50 p-4 mb-6 text-white bg-gray-100'>
 			<div className='flex justify-between max-w-5xl mx-auto'>
 				<div className='text-[#ff3131] font-bold text-xl'>
 					Madeline Advisory
