@@ -9,7 +9,7 @@ import {
 	Card,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { SendIcon, XIcon } from 'lucide-react';
+import { MessagesSquare, SendIcon, XIcon } from 'lucide-react';
 import data, { Chat } from '@/data/chat';
 import ChatText from './ChatText';
 
@@ -36,9 +36,10 @@ export default function Chatbot() {
 	if (!open)
 		return (
 			<Button
-				className='fixed w-28 bottom-10 right-10'
+				className='fixed flex h-auto gap-2 bottom-10 right-10'
 				onClick={handleOpen}>
-				Chatbot
+				<span>Chatbot</span>
+				<MessagesSquare className='w-6 h-6' />
 			</Button>
 		);
 
